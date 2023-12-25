@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login Form</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #cfe7f5;
+            margin: 10;
+            justify-content: center;
+            display: flex;
+            height: 100vh;
+        }
+        input {
+            width: 100%;
+            padding: 10px;
+            margin: 8px 0;
+            box-sizing: border-box;
+        }
+        button {
+            background-color: #0019fc;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div id="loginForm">
+    <label for="username">gmail:</label>
+    <input type="text" id="username" name="username" required>
+
+    <label for="password">Password:</label>
+    <input type="password" id="password" name="password" required>
+
+
+    <button type ="button" onclick="validateForm()">Login</button>
+</div>
+
+<script>
+    function validateForm() {
+        var username = document.getElementById("username").value;
+        var password = document.getElementById("password").value;
+
+       
+        if (username === "dzakyalfa2005@gmail.com" && password === "darularqam") {
+            alert("Login berhasil!");
+
+            // Apabila Login Berhasil
+            window.location.href = "berhasil.html";
+        } else {
+            alert("Login gagal. Periksa kembali username dan password Anda.");
+        }
+    }
+</script>
+
+</body>
+</html>
